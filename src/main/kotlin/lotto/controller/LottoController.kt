@@ -1,14 +1,23 @@
 package lotto.controller
 
-import lotto.view.Input
+import lotto.domain.Lotto
+import lotto.view.LottoView
 
 class LottoController {
-    private val input = Input()
+    private val lottoView = LottoView()
+    val lotto = Lotto()
 
 
     fun runLotto() {
-        input.inputMoneyMsg()
-        val money = readln()
+        lottoView.inputMoneyMsg()
+        val money = readln().toInt()
+        lottoView.purchaseQuantityMsg(money)
+        val lottoList =lotto.makeLottoList(money)
+        for (i in lottoList.indices) {
+            println(lottoList[i])
+        }
+
+
     }
 
 }
