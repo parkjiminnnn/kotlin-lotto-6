@@ -13,7 +13,7 @@ class LottoView {
     fun purchaseQuantityMsg(buyCount: Int) {
         println("$buyCount$PURCHASE_QUANTITY_MSG")
     }
-    fun inputWinningNumbersMsg() {
+    fun inputWinNumbersMsg() {
         println()
         println(INPUT_WINNING_NUMBERS_MSG)
     }
