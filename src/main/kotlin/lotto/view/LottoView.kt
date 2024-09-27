@@ -4,6 +4,7 @@ import lotto.constants.Constant.INPUT_BONUS_NUMBER_MSG
 import lotto.constants.Constant.INPUT_MONEY_MSG
 import lotto.constants.Constant.INPUT_WINNING_NUMBERS_MSG
 import lotto.constants.Constant.PURCHASE_QUANTITY_MSG
+import lotto.constants.Constant.WIN_TOTAL_MSG
 
 class LottoView {
     fun inputMoneyMsg() {
@@ -13,6 +14,7 @@ class LottoView {
     fun purchaseQuantityMsg(buyCount: Int) {
         println("$buyCount$PURCHASE_QUANTITY_MSG")
     }
+
     fun inputWinNumbersMsg() {
         println()
         println(INPUT_WINNING_NUMBERS_MSG)
@@ -21,6 +23,11 @@ class LottoView {
     fun inputBonusNumberMsg() {
         println()
         println(INPUT_BONUS_NUMBER_MSG)
+    }
+
+    fun winTotalMsg() {
+        println(WIN_TOTAL_MSG)
+        println("---")
     }
 
 }
