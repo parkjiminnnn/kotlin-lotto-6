@@ -3,7 +3,7 @@ package lotto.domain
 import camp.nextstep.edu.missionutils.Randoms
 import lotto.constants.Constant.LOTTO_PRICE
 
-class MakeLottoList {
+class MakeList {
     fun makeLottoList(money: Int): List<List<Int>> {
         val lottoNumberList = mutableListOf<List<Int>>()
         repeat(money / LOTTO_PRICE) {
@@ -14,5 +14,12 @@ class MakeLottoList {
             lottoNumberList.add(lottoNumbers.toList().sorted())
         }
         return lottoNumberList
+    }
+    fun makeNumberList(inputWinNumbers: String):List<Int> {
+        val numbers = mutableListOf<Int>()
+        for (i in inputWinNumbers.indices) {
+            numbers.add(inputWinNumbers.split(',')[i].toInt())
+        }
+        return numbers
     }
 }
