@@ -3,16 +3,10 @@ package lotto.view
 import lotto.constants.Constant.INPUT_BONUS_NUMBER_MSG
 import lotto.constants.Constant.INPUT_MONEY_MSG
 import lotto.constants.Constant.INPUT_WINNING_NUMBERS_MSG
-import lotto.constants.Constant.PURCHASE_QUANTITY_MSG
-import lotto.constants.Constant.WIN_TOTAL_MSG
 
-class LottoView {
+class InputView {
     fun inputMoneyMsg() {
         return println(INPUT_MONEY_MSG)
-    }
-
-    fun purchaseQuantityMsg(buyCount: Int) {
-        println("$buyCount$PURCHASE_QUANTITY_MSG")
     }
 
     fun inputWinNumbersMsg() {
@@ -24,10 +18,4 @@ class LottoView {
         println()
         println(INPUT_BONUS_NUMBER_MSG)
     }
-
-    fun winTotalMsg() {
-        println(WIN_TOTAL_MSG)
-        println("---")
-    }
-
 }
