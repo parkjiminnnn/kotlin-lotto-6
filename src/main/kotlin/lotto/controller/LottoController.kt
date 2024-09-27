@@ -16,7 +16,10 @@ class LottoController {
             println(lottoList[i])
         }
         lottoView.inputWinningNumbersMsg()
-        val inputWinningNumbers = readln().toInt()
+        val inputWinningNumbers = readln()
+        lottoView.inputBonusNumberMsg()
+        val inputBonusNumber = readln()
+
 
 
     }
