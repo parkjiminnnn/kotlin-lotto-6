@@ -8,12 +8,11 @@ class Lotto(private val numbers: List<Int>) {
     }
 
     fun makeLottoList(money: Int): List<List<Int>> {
-        val lottoNumbers = mutableSetOf<Int>()
         val lottoNumberList = mutableListOf<List<Int>>()
         repeat(money / 1000) {
+            val lottoNumbers = mutableSetOf<Int>()
             while (lottoNumbers.size < 6) {
-                val generateRandomNumber = Randoms.pickNumberInRange(1, 45)
-                lottoNumbers.add(generateRandomNumber)
+                lottoNumbers.add(Randoms.pickNumberInRange(1, 45))
             }
             lottoNumberList.add(lottoNumbers.toList().sorted())
         }
