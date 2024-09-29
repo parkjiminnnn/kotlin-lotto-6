@@ -17,8 +17,9 @@ class MakeList {
     }
     fun makeNumberList(inputWinNumbers: String):List<Int> {
         val numbers = mutableListOf<Int>()
-        for (i in inputWinNumbers.indices) {
+        for (i in 0 until 6) {
             numbers.add(inputWinNumbers.split(',')[i].toInt())
+            println(inputWinNumbers.split(',')[i].toInt())
         }
         return numbers
     }
